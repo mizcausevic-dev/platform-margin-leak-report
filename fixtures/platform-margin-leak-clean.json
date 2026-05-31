@@ -1,0 +1,29 @@
+{
+  "snapshots": [
+    {
+      "id": "governed-web-estate",
+      "name": "Governed Web Estate",
+      "scope": "WEB_PLATFORM",
+      "riskStatus": "HEALTHY",
+      "snapshotStatus": "CURRENT",
+      "costPath": "hosting/cdn/analytics",
+      "owner": "WebOps director",
+      "annualRunRateUsd": 320000,
+      "marginExposureScore": 18,
+      "collectedAt": "2026-05-31T07:00:00Z"
+    },
+    {
+      "id": "governed-reporting",
+      "name": "Governed Reporting",
+      "scope": "REVENUE_SYSTEM",
+      "riskStatus": "HEALTHY",
+      "snapshotStatus": "CURRENT",
+      "costPath": "board/metrics",
+      "owner": "RevOps analytics",
+      "annualRunRateUsd": 210000,
+      "marginExposureScore": 12,
+      "collectedAt": "2026-05-31T07:00:00Z"
+    }
+  ],
+  "leaks": []
+}
