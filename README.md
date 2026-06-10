@@ -13,6 +13,28 @@ Board-ready executive intelligence product for platform margin leakage. It turns
 - investment brief packet view for diligence-ready executive summaries
 - public synthetic control surface plus JSON APIs and CLI
 
+## Product depth
+
+Platform Margin Leak Report turns platform-cost frustration into a CFO-readable decision surface. It is designed for executives, operating partners, finance leaders, platform owners, RevOps leaders, and diligence teams that need to understand where cost is leaking, where savings can be captured, where investment is justified, and what story belongs in the board deck.
+
+For non-technical readers, it answers: where are we wasting money, which platform lanes are driving margin drag, which owners need to act, and what can we say with confidence to the board or investors? For technical reviewers, it exposes a TypeScript library, CLI, Express routes, JSON APIs, synthetic fixtures, static Pages output, screenshots, tests, and validation commands that back the public narrative.
+
+## What these repos have in common
+
+This repo follows the Kinetic Gain control-plane pattern:
+
+- name the operational ambiguity instead of hiding it inside screenshots or generic landing-page copy
+- expose the decision surface as UI, JSON payloads, docs, screenshots, and validation commands
+- connect GTM value, product narrative, technical proof, and executive review into the same public artifact
+- keep public demos synthetic and safe while preserving enough structure to show how a real deployment would work
+
+## Operating workflow
+
+1. Load a synthetic platform-margin packet covering cloud waste, vendor overlap, identity overhead, release friction, support drag, and reporting trust.
+2. Score the margin lanes and identify which findings materially affect savings, investment priority, and board narrative.
+3. Generate benchmark, investment-brief, and verification views from the same underlying evidence.
+4. Ship static public proof without exposing live billing, vendor, identity, or finance systems.
+
 ## Routes
 
 - `/`

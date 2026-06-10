@@ -81,6 +81,12 @@ function layout(title: string, active: string, body: string) {
       .src,.pcard{border-radius:16px; padding:18px 20px; border:1px solid var(--line); background:linear-gradient(180deg, rgba(11,18,32,.85), rgba(8,14,26,.65))}
       .src .src-name{font-family:var(--mono); font-size:11px; color:var(--bert); letter-spacing:.18em; text-transform:uppercase}
       .src .src-tit{margin:8px 0 6px; font-size:18px; font-weight:600}
+      .depth-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
+      @media (max-width:1100px){.depth-grid{grid-template-columns:repeat(2,1fr)}} @media (max-width:640px){.depth-grid{grid-template-columns:1fr}}
+      .depth-card{border-radius:16px; padding:18px 20px; border:1px solid rgba(120,255,170,.16); background:linear-gradient(180deg, rgba(11,18,32,.88), rgba(8,14,26,.68)); min-height:188px}
+      .depth-card .kicker{font-family:var(--mono); font-size:10px; color:var(--bert); letter-spacing:.16em; text-transform:uppercase; margin-bottom:12px}
+      .depth-card h3{margin:0 0 10px; font-size:18px; line-height:1.25}
+      .depth-card p{margin:0; color:var(--muted); font-size:13.5px; line-height:1.6}
       .ttbl{width:100%; border-collapse:separate; border-spacing:0; border:1px solid var(--line); border-radius:14px; overflow:hidden}
       .ttbl th,.ttbl td{padding:13px 14px; text-align:left; font-size:13.5px; vertical-align:top}
       .ttbl thead th{font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted2); border-bottom:1px solid var(--line); background:rgba(11,18,32,.5)}
@@ -136,10 +142,14 @@ function layout(title: string, active: string, body: string) {
         </aside>
       </div>
       ${body}
+      ${renderProductDepth()}
+      ${renderCommonPattern()}
       <div class="footer">
         <div>platform-margin-leak-report · synthetic sample data only</div>
         <div class="footer-links">
-          <a class="meta-chip" href="https://github.com/mizcausevic-dev/">GitHub</a>
+          <a class="meta-chip" href="https://github.com/mizcausevic-dev/platform-margin-leak-report">GitHub</a>
+          <a class="meta-chip" href="https://portfolio.kineticgain.com/">Portfolio</a>
+          <a class="meta-chip" href="https://suite.kineticgain.com/">Suite</a>
           <a class="meta-chip" href="https://www.linkedin.com/in/mirzacausevic/">LinkedIn</a>
           <a class="meta-chip" href="https://kineticgain.com/">Kinetic Gain</a>
         </div>
@@ -147,6 +157,57 @@ function layout(title: string, active: string, body: string) {
     </div>
   </body>
 </html>`;
+}
+
+function renderProductDepth() {
+  return `<section class="section">
+        <div class="sh"><h2>Product depth</h2><div class="note">buyer value · technical proof · GTM story</div></div>
+        <div class="depth-grid">
+          <div class="depth-card">
+            <div class="kicker">SaaS GTM analyst</div>
+            <h3>Sell the cost story without flattening it into a generic FinOps page.</h3>
+            <p>The report frames platform margin as an executive decision: remove waste, reduce vendor drag, fund the right remediation, and protect the board narrative.</p>
+          </div>
+          <div class="depth-card">
+            <div class="kicker">Value architect</div>
+            <h3>Translate operational drag into recoverable margin.</h3>
+            <p>Cloud leakage, duplicate-vendor overlap, identity overhead, release friction, support drag, and reporting distrust are tied to owners, severity, annualized leak, and next action.</p>
+          </div>
+          <div class="depth-card">
+            <div class="kicker">Product marketing</div>
+            <h3>Make the buyer-readable promise explicit.</h3>
+            <p>Executives and operating partners can quickly see where the company is exposed, where money can be saved, where investment belongs, and what story is defensible.</p>
+          </div>
+          <div class="depth-card">
+            <div class="kicker">Technical proof</div>
+            <h3>Back the narrative with inspectable implementation assets.</h3>
+            <p>The repo ships TypeScript scoring, CLI output, Express routes, JSON APIs, static Pages, fixtures, screenshots, tests, smoke checks, and synthetic-data boundaries.</p>
+          </div>
+        </div>
+      </section>`;
+}
+
+function renderCommonPattern() {
+  return `<section class="section">
+        <div class="sh"><h2>What these repos have in common</h2><div class="note">risk · owner · proof · next action</div></div>
+        <div class="board">
+          <article class="pcard">
+            <div class="ptop"><div class="pnum">01</div><div class="ppri">Risk</div></div>
+            <h3>Each product names the ambiguity.</h3>
+            <p class="pdesc">The Kinetic Gain pattern turns cost, governance, reliability, revenue, or compliance drag into a named decision surface instead of a screenshot dump.</p>
+          </article>
+          <article class="pcard">
+            <div class="ptop"><div class="pnum">02</div><div class="ppri">Proof</div></div>
+            <h3>The public artifact is backed by implementation evidence.</h3>
+            <p class="pdesc">Routes, APIs, CLI output, fixtures, docs, screenshots, and validation commands make the claim reviewable for technical and non-technical readers.</p>
+          </article>
+          <article class="pcard">
+            <div class="ptop"><div class="pnum">03</div><div class="ppri">Action</div></div>
+            <h3>The next move is visible.</h3>
+            <p class="pdesc">Every lane resolves into owner, severity, blocker, recommendation, and executive narrative so the surface supports a decision, not just discovery.</p>
+          </article>
+        </div>
+      </section>`;
 }
 
 function severityClass(value: string) {
